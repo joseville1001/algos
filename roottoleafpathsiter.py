@@ -1,4 +1,4 @@
-# Problem idea by u/kbielefe in this reddit post :
+# Problem idea by u/kbielefe in this reddit post:
 # https://www.reddit.com/r/AskProgramming/comments/q8glj6/what_is_it_like_to_work_as_an_algorithm_developer/hgqjvg4/
 
 # Solution:
@@ -31,11 +31,11 @@ def root_to_leaf_paths_node_iter(root):
         yield from path
 
 # Notes:
-# - can be easily modified to yield `node`'s instead of `node.val`'s.
-# - possible speed improvement: do iterative dfs instead of recursive dfs.
-# - can be lazier.
-#   Currently, the complet root to leaf path is computed before we yield any of its nodes.
-#   If we wanted to be lazier, we could yield nodes from a partial path and lazily complete the path as we are asked to yield more nodes.
+# - Can be easily modified to yield `node`'s instead of `node.val`'s.
+# - Possible speed improvement: do iterative dfs instead of recursive dfs.
+# - Can be lazier:
+#   - Currently, the complete root to leaf path is computed before we yield any of its nodes.
+#   - If we wanted to be lazier, we could yield nodes from a partial path and lazily complete the path as we are asked to yield more nodes.
 
 # "Testing" on a small tree
 
