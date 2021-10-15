@@ -32,7 +32,10 @@ def root_to_leaf_paths_node_iter(root):
 
 # Notes:
 # - can be easily modified to yield `node`'s instead of `node.val`'s.
-# - possible speed improvement: do iterative dfs instead of recursive dfs
+# - possible speed improvement: do iterative dfs instead of recursive dfs.
+# - can be lazier.
+#   Currently, the complet root to leaf path is computed before we yield any of its nodes.
+#   If we wanted to be lazier, we could yield nodes from a partial path and lazily complete the path as we are asked to yield more nodes.
 
 # "Testing" on a small tree
 
@@ -64,7 +67,9 @@ node700 = TreeNode(700, [node300])
 
 root = TreeNode(1, [node45, node700])
 
-# prints each root to leaf path
+# "Test"
+
+# print each root to leaf path
 for path in root_to_leaf_paths_path_iter(root):
     print(path)
 
@@ -76,7 +81,7 @@ for path in root_to_leaf_paths_path_iter(root):
 # [1, 45, 75, 60]
 # [1, 700, 300, 200, 80]
 
-# prints each node in each root to leaf path
+# print each node value in each root to leaf path
 for nodeval in root_to_leaf_paths_node_iter(root):
     print(nodeval)
 
