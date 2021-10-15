@@ -3,6 +3,9 @@
 
 # Solution:
 
+# `path` reuse:
+# Many root to leaf paths differ by only a few nodes (the trailing nodes),
+# so a good optimization is to reuse `path` as much as possible, which this solution does.
 class TreeNode:
     def __init__(self, val=None, children=None):
         self.val = val
