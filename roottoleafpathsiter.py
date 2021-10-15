@@ -34,7 +34,7 @@ def root_to_leaf_paths_node_iter(root):
 # - can be easily modified to yield `node`'s instead of `node.val`'s.
 # - possible speed improvement: do iterative dfs instead of recursive dfs
 
-# Testing on a small tree
+# "Testing" on a small tree
 
 # The tree:
 # 
